@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for user in users %}
+        <div>
+            {% if user.avatar %}
+                <img src="{{ user.avatar }}" alt="{{ user.email }}">
+            {% endif %}
+            {{ user.email }}
+        </div>
+    {% endfor %}
+{% endblock %}
